@@ -69,11 +69,11 @@ style:width={boxWidth} style:height={boxHeight}>
 
 <style lang="scss">
 .icon-box {
-  @apply relative p-1 cursor-pointer flex justify-center items-center bg-[var(--backgroundColor)] hover:bg-[var(--backgroundHover)] mb-3 rounded-[var(--borderRadius)] hover:rounded-[var(--borderRadiusHover)];
+  @apply relative p-1 cursor-pointer flex justify-center items-center transition-colors bg-[var(--backgroundColor)] hover:bg-[var(--backgroundHover)] mb-3 rounded-[var(--borderRadius)] hover:rounded-[var(--borderRadiusHover)];
   transition: .2s;
   &__tooltip {
-    @apply absolute top-0 left-[140%] bg-black p-2 text-white rounded-md font-semibold transition;
-    transition: .8s;
+    @apply absolute top-0 left-[140%] bg-black p-2 text-white rounded-md font-semibold transition-opacity;
+    transition: .6s;
   }
 }
 .icon-box:hover svg path {
