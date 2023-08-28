@@ -6,18 +6,22 @@ const listIcon = [
   {
     icon: discord,
     tooltip: 'home',
+    backgroundHover: '#5865f2'
   },
   {
     icon: heart,
     tooltip: 'wishlist',
+    backgroundHover: '#23A559'
   },
    {
     icon: infoIcon,
     tooltip: 'info',
+    backgroundHover: '#23A559'
   },
    {
     icon: closeIcon,
     tooltip: 'close',
+    backgroundHover: '#23A559'
   },
 ];
 ---
@@ -29,7 +33,7 @@ const listIcon = [
         <Icons
           iconValue={item.icon}
           tooltip={item.tooltip}
-          backgroundHover="#23A559"
+          backgroundHover={item.backgroundHover}
           borderRadius="99px"
           borderRadiusHover="12px"
           backgroundColor="#313338"
