@@ -1,0 +1,57 @@
+---
+import Icons from './Icons.svelte';
+import { heart, discord, infoIcon, closeIcon } from '../utils/Icons';
+
+const listIcon = [
+  {
+    icon: discord,
+    tooltip: 'home',
+  },
+  {
+    icon: heart,
+    tooltip: 'wishlist',
+  },
+   {
+    icon: infoIcon,
+    tooltip: 'info',
+  },
+   {
+    icon: closeIcon,
+    tooltip: 'close',
+  },
+];
+---
+
+<section class="sidebar">
+  <div class="sidebar_container">
+    {
+      listIcon.map((item) => (
+        <Icons
+          iconValue={item.icon}
+          tooltip={item.tooltip}
+          backgroundHover="#23A559"
+          borderRadius="99px"
+          borderRadiusHover="12px"
+          backgroundColor="#313338"
+          boxWidth="40px"
+          boxHeight="40px"
+          width="20"
+          height="20"
+          colorHover="#ffffff"
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style lang="scss">
+  .sidebar {
+    @apply fixed top-0 left-0 bg-black p-3 w-16 h-screen;
+    &_container {
+      @apply flex flex-col space-y-4;
+      .icon-box {
+        @apply mb-5;
+      }
+    }
+  }
+</style>
